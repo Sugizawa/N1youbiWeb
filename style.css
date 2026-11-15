@@ -1,0 +1,232 @@
+
+/* 全局基础设置 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Microsoft YaHei", sans-serif;
+    background-color: #f5f2f8;
+    color: #383044;
+    line-height: 1.8;
+}
+
+/* 页面顶部 */
+header {
+    padding: 20px 40px;
+    text-align: center;
+    background-color: #e8e0f0;
+}
+
+header h1 {
+    font-size: 42px;
+    margin: 0;
+    letter-spacing: 4px;
+}
+
+header p {
+    margin-top: 12px;
+    color: #746783;
+}
+
+/* 页面主要内容 */
+main {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+main h2 {
+    font-size: 28px;
+}
+
+/* 页面底部 */
+footer {
+    padding: 25px;
+    text-align: center;
+    color: #8b8195;
+    font-size: 14px;
+}
+
+
+/* 顶部导航栏 */
+nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: #514460;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #a17ac4;
+}
+
+.qq-button img {
+    width: 30px;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.qq-button img:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+/* 开幕画面 */
+.opening-screen {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+    min-height: 100%;
+
+    /* 覆盖原本 main 的样式 */
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+
+    /* 背景图片 */
+    background-image: url("images/opening-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    text-align: center;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 1.2s ease;
+}
+
+/* 背景遮罩：让文字更容易阅读 */
+.opening-screen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 10, 25, 0.35);
+    z-index: 0;
+}
+
+/* 标题内容 */
+.opening-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* 网站标题 */
+.opening-content h1 {
+    font-family: "Microsoft YaHei", sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: 10px;
+    margin-bottom: 18px;
+}
+
+/* 副标题 */
+.opening-content p {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+/* 开始按钮 */
+#start-button {
+    padding: 12px 38px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+    background: rgba(20, 15, 30, 0.35);
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#start-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
+
+/* 底部版权 */
+.opening-footer {
+    position: absolute;
+    z-index: 1;
+    bottom: 20px;
+    color: white;
+    font-size: 13px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+}
+/* 开幕画面淡出 */
+.opening-screen.fade-out {
+    animation: opening-fade-out 1.2s ease forwards;
+    pointer-events: none;
+}
+
+@keyframes opening-fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* 首页淡入动画 */
+body.home-page {
+    opacity: 0;
+    animation: home-fade-in 1.2s ease forwards;
+}
+
+/* 定义淡入过程 */
+@keyframes home-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* 开幕画面淡入 */
+.opening-screen {
+    opacity: 0;
+    animation: opening-fade-in 1.5s ease forwards;
+}
+
+/* 定义淡入过程 */
+@keyframes opening-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
