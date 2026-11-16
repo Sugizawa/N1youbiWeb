@@ -35,7 +35,7 @@ main {
     max-width: 1000px;
     margin: 60px auto;
     padding: 40px;
-    background-color: #ffffff;
+    background-color: transparent;
     border-radius: 12px;
 }
 
@@ -75,6 +75,7 @@ nav a:hover {
 .qq-button img {
     width: 30px;
     height: auto;
+    border-radius: 8px;
     transition: transform 0.2s;
 }
 
@@ -229,4 +230,12 @@ body.home-page {
     to {
         opacity: 1;
     }
+}
+
+/* 独立内容卡片 */
+.content-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    margin-bottom: 30px;
 }
