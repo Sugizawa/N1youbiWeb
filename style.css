@@ -239,3 +239,60 @@ body.home-page {
     border-radius: 12px;
     margin-bottom: 30px;
 }
+
+
+
+/* 游戏下载区域 */
+.download-box {
+    background-color: #ffffff;
+}
+
+/* 每个平台的下载区域 */
+.download-item {
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e0f0;
+    border-radius: 10px;
+}
+
+/* 平台标题 */
+.download-item h3 {
+    margin-top: 0;
+    color: #383044;
+}
+
+/* 下载按钮 */
+.download-link {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #dcd2e8;
+    border-radius: 8px;
+    color: #514460;
+    text-decoration: none;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+/* 鼠标悬停效果 */
+.download-link:hover {
+    background-color: #f5f2f8;
+    border-color: #a17ac4;
+    color: #746783;
+}
+
+/* 版本说明 */
+.download-note {
+    color: #8b8195;
+    font-size: 14px;
+}
+
+
+/* 可点击图片 */
+.image-link img {
+    width: 800px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+
